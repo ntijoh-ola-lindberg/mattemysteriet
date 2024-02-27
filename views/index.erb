@@ -1,0 +1,14 @@
+<% case @iscorrect
+		   when "yes" %>
+    <h2><%=@vanswer%> är rätt</h2>
+        <% when "no" %>
+    <h2><%=@vanswer%> är fel</h2>
+<% end %>
+
+<h1>Vad är <%=@first%> + <%=@second%>?</h1>
+<form action="/validate" method="post">
+    <input type="text" name="answer" autofocus>
+    <input type="hidden" name="first" value="<%=@first%>">
+    <input type="hidden" name="second" value="<%=@second%>">
+    <input type="submit">
+</form>
