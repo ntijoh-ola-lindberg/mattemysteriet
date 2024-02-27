@@ -1,8 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mattemysteriet</title>
+    <link rel="stylesheet" type="text/css" href="/style.css?<%=Time.now.to_i%>"> 
+</head>
+<body>
+
 <% case @iscorrect
 		   when "yes" %>
-    <h2><%=@vanswer%> är rätt</h2>
+    <section class="correct"><h2><%=@vanswer%> är rätt</h2></section>
         <% when "no" %>
-    <h2><%=@vanswer%> är fel</h2>
+    <section class="incorrect"><h2><%=@vanswer%> är fel</h2></section>
 <% end %>
 
 <h1>Vad är <%=@first%> + <%=@second%>?</h1>
@@ -10,5 +18,9 @@
     <input type="text" name="answer" autofocus>
     <input type="hidden" name="first" value="<%=@first%>">
     <input type="hidden" name="second" value="<%=@second%>">
-    <input type="submit">
+    <input type="submit" value="Svara">
 </form>
+
+<img class="logo" src="/mattemysteriet-logo.png">
+
+</body>

@@ -1,0 +1,23 @@
+body {
+    background-color: #8eb15c;
+    color: white;
+    font-family: 'Comic Sans MS', cursive;
+    margin: 2em;
+}
+
+img {
+    display: block;
+}
+
+.logo {
+    margin-top: 50px;
+    width: 150px;
+}
+
+.correct {
+    color: #a5eb06;
+}
+
+.incorrect {
+    color: #c90076
+}
